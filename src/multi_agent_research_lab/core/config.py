@@ -4,6 +4,7 @@ Keep config small and explicit. Do not read environment variables directly in ag
 """
 
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -32,6 +33,11 @@ class Settings(BaseSettings):
     )
 
     tavily_api_key: str | None = Field(default=None, validation_alias="TAVILY_API_KEY")
+
+    offline_corpus_dir: Path = Field(
+        default=Path("ai_agent_offline_research_corpus_v2/topics"),
+        validation_alias="OFFLINE_CORPUS_DIR",
+    )
 
     max_iterations: int = Field(default=6, ge=1, le=20, validation_alias="MAX_ITERATIONS")
     timeout_seconds: int = Field(default=60, ge=5, le=600, validation_alias="TIMEOUT_SECONDS")

@@ -19,6 +19,6 @@ agents:
 
 benchmark:
   queries:
-    - "Research GraphRAG state-of-the-art and write a 500-word summary"
-    - "Compare single-agent and multi-agent workflows for customer support"
-    - "Summarize production guardrails for LLM agents"
+    - "Compare single-agent and multi-agent architectures for complex research tasks"
+    - "Summarize production guardrails and failure modes for LLM agents"
+    - "Explain role specialization and shared state in multi-agent systems"
