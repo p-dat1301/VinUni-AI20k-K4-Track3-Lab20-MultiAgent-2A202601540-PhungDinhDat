@@ -1,0 +1,132 @@
+{
+  "query": "Compare single-agent and multi-agent architectures",
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer",
+    "critic",
+    "done"
+  ],
+  "trace": [
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "researcher",
+        "iteration": 1
+      }
+    },
+    {
+      "name": "researcher",
+      "payload": {
+        "sources": 5,
+        "has_notes": true
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "analyst",
+        "iteration": 2
+      }
+    },
+    {
+      "name": "analyst",
+      "payload": {
+        "has_analysis": true
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "writer",
+        "iteration": 3
+      }
+    },
+    {
+      "name": "writer",
+      "payload": {
+        "has_answer": true
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "critic",
+        "iteration": 4
+      }
+    },
+    {
+      "name": "critic",
+      "payload": {
+        "coverage": 1.0,
+        "hallucinated": []
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "next": "done",
+        "iteration": 5
+      }
+    }
+  ],
+  "errors": [],
+  "final_answer": "Summary\n\n1. Purpose and context [T01-SYN-A].\n2. Single-Agent vs Multi-Agent Architectures for Complex Research Tasks: Purpose and context [T01-SYN-B].\n3. Purpose and context [T01-SYN-C].\n4. Enabling Next-Gen LLM Applications via Multi-Agent Conversation: AutoGen described a framework for constructing LLM applications as conversations among customizable agents [autogen].\n5. Meta Programming for A Multi-Agent Collaborative Framework: MetaGPT framed multi-agent collaboration around standardized operating procedures and specialized roles, particularly for software development [metagpt].\n\nConclusions\n\nThe evidence above ([T01-SYN-A], [T01-SYN-B], [T01-SYN-C]) supports the main claims. Synthetic benchmark documents were not presented as real publications.",
+  "sources": [
+    {
+      "title": "Controlled Lab Study on Single-Agent vs Multi-Agent Architectures for Complex Research Tasks",
+      "url": null,
+      "snippet": "Purpose and context. This is a synthetic benchmark document created for Topic 1: Single-Agent vs Multi-Agent Architectures for Complex Research Tasks. It is not a real publication and should never be cited as one. Its purpose is to give the research system a self-contained piece of evidence with enough methodological detail to evaluate rather than merely repeat.\n\nStudy design. 120 benchmark tasks,",
+      "metadata": {
+        "source_id": "T01-SYN-A",
+        "is_synthetic": true,
+        "topic_file": "ai_agent_offline_research_corpus_v2/topics/01_single_agent_vs_multi_agent_architectures_for_complex_research_tasks.json",
+        "provider": "offline-corpus"
+      }
+    },
+    {
+      "title": "Field Deployment Retrospective: Single-Agent vs Multi-Agent Architectures for Complex Research Tasks",
+      "url": null,
+      "snippet": "Purpose and context. This is a synthetic benchmark document created for Topic 1: Single-Agent vs Multi-Agent Architectures for Complex Research Tasks. It is not a real publication and should never be cited as one. Its purpose is to give the research system a self-contained piece of evidence with enough methodological detail to evaluate rather than merely repeat.\n\nStudy design. Retrospective over 8",
+      "metadata": {
+        "source_id": "T01-SYN-B",
+        "is_synthetic": true,
+        "topic_file": "ai_agent_offline_research_corpus_v2/topics/01_single_agent_vs_multi_agent_architectures_for_complex_research_tasks.json",
+        "provider": "offline-corpus"
+      }
+    },
+    {
+      "title": "Opinion Survey on Single-Agent vs Multi-Agent Architectures for Complex Research Tasks",
+      "url": null,
+      "snippet": "Purpose and context. This is a synthetic benchmark document created for Topic 1: Single-Agent vs Multi-Agent Architectures for Complex Research Tasks. It is not a real publication and should never be cited as one. Its purpose is to give the research system a self-contained piece of evidence with enough methodological detail to evaluate rather than merely repeat.\n\nStudy design. Convenience sample o",
+      "metadata": {
+        "source_id": "T01-SYN-C",
+        "is_synthetic": true,
+        "topic_file": "ai_agent_offline_research_corpus_v2/topics/01_single_agent_vs_multi_agent_architectures_for_complex_research_tasks.json",
+        "provider": "offline-corpus"
+      }
+    },
+    {
+      "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+      "url": "https://arxiv.org/abs/2308.08155",
+      "snippet": "AutoGen described a framework for constructing LLM applications as conversations among customizable agents. Agents can combine language models, human input, tools, and code, and developers can define different interaction patterns. Its main relevance to multi-agent research is architectural: collaboration can be programmed as roles and message exchanges rather than as one monolithic prompt. A framework demonstration is not proof that multiple agents always outperform one agent. Performance depends on model quality, task structure, interaction policy, and how redundant conversation is controlled.",
+      "metadata": {
+        "source_id": "autogen",
+        "is_synthetic": false,
+        "topic_file": "ai_agent_offline_research_corpus_v2/topics/01_single_agent_vs_multi_agent_architectures_for_complex_research_tasks.json",
+        "provider": "offline-corpus"
+      }
+    },
+    {
+      "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+      "url": "https://arxiv.org/abs/2308.00352",
+      "snippet": "MetaGPT framed multi-agent collaboration around standardized operating procedures and specialized roles, particularly for software development. It also explicitly discussed cascading hallucinations as a risk of naively chaining model outputs. The relevant design lesson is that structured artifacts and role-specific checks can be preferable to unconstrained conversational chains. Reported benefits on software-oriented tasks do not establish superiority for all domains, and SOPs can become rigid or expensive if task uncertainty is high.",
+      "metadata": {
+        "source_id": "metagpt",
+        "is_synthetic": false,
+        "topic_file": "ai_agent_offline_research_corpus_v2/topics/01_single_agent_vs_multi_agent_architectures_for_complex_research_tasks.json",
+        "provider": "offline-corpus"
+      }
+    }
+  ]
+}
